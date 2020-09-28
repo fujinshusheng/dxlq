@@ -1,0 +1,55 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/shenpi/shenpi",
+    "pages/danju/danju",
+    "pages/baobiao/baobiao",
+    "pages/shezhi/shezhi",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#29abe2",
+    "borderStyle": "white",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/shenpi/shenpi",
+        "iconPath": "images/nav/shenpi.png",
+        "selectedIconPath": "images/nav/shenpiselect.png",
+        "text": "审批"
+      },
+      {
+        "pagePath": "pages/danju/danju",
+        "iconPath": "images/nav/danju.png",
+        "selectedIconPath": "images/nav/danjuselect.png",
+        "text": "单据"
+      },
+      {
+        "pagePath": "pages/baobiao/baobiao",
+        "iconPath": "images/nav/baobiao.png",
+        "selectedIconPath": "images/nav/baobiaoselect.png",
+        "text": "报表"
+      },
+      {
+        "pagePath": "pages/shezhi/shezhi",
+        "iconPath": "images/nav/shezhi.png",
+        "selectedIconPath": "images/nav/shezhiselect.png",
+        "text": "设置"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false,
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

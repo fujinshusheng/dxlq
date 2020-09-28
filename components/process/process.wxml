@@ -1,0 +1,6 @@
+  <view class="process">
+    <view wx:for="{{process}}" wx:key="unique" class="processstep">
+      <view class="processtext" data-url="{{item.url}}" bindtap="ymgoto">{{item.text}}</view>
+    </view>
+  </view>
+

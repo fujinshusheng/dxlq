@@ -1,0 +1,20 @@
+.head{
+  background-color: rgb(129,211,248);
+  height: 100rpx;
+  box-shadow: 10rpx 10rpx 10rpx #999999;
+  padding-top:15rpx;
+}
+.sculpture{
+  width:80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background-color: white;
+  margin-left: 2%;
+  overflow: hidden;
+}
+.touxiang{
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 100%;
+  min-height: 100%;
+}
