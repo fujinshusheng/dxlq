@@ -1,0 +1,33 @@
+<view>
+  <mp-cells title="基本信息">
+    <mp-cell title="设备编号" ext-class="formList">
+      <input class="weui-input" placeholder="请输入设备编号" />
+    </mp-cell>
+    <mp-cell title="使用部门" ext-class="formList">
+      <input class="weui-input" placeholder="请输入使用部门" />
+    </mp-cell>
+    <mp-cell prop="date" title="保养时间" ext-class="formList">
+      <picker data-field="date" mode="date" value="{{date}}" bindchange="bindDateChange">
+        <view class="weui-input">{{date}}</view>
+      </picker>
+    </mp-cell>
+    <view class="weui-cells__title">保养内容</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入文本" style="height: 3.3em" />
+          <view class="weui-textarea-counter">0/200</view>
+        </view>
+      </view>
+    </view>
+    <view class="weui-cells__title">审批记录</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入文本" style="height: 3.3em" />
+          <view class="weui-textarea-counter">0/200</view>
+        </view>
+      </view>
+    </view>
+  </mp-cells>
+</view>

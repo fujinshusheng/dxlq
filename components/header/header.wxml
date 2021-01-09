@@ -1,6 +1,0 @@
-<!--components/header/header.wxml-->
-<view class="head">
-  <view class="sculpture">
-    <image src="{{url}}" class="touxiang"></image>
-  </view>
-</view>

@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "header":"/components/common/header/header",
+    "selectlist":"/components/common/selectlist/selectlist",
+    "mp-cells": "/miniprogram_npm/weui-miniprogram/cells/cells",
+    "mp-cell": "/miniprogram_npm/weui-miniprogram/cell/cell",
+    "mp-searchbar": "/miniprogram_npm/weui-miniprogram/searchbar/searchbar"
+  },
+  "navigationBarTitleText": "销售出库单"
+}

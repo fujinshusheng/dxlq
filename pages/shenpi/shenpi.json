@@ -1,9 +1,0 @@
-{
-  "usingComponents": {
-    "module":"/components/module/module",
-    "process":"/components/process/process",
-    "header":"/components/header/header"
-  },
-  "navigationBarTitleText": "审批界面"
-
-}

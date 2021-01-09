@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "header":"/components/common/header/header",
+    "nav":"/components/baobiao/nav/nav",
+    "chart":"/components/baobiao/chart/chart"
+  },
+  "navigationBarTitleText": "报表界面",
+  "enablePullDownRefresh":true
+}

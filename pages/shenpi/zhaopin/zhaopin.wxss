@@ -1,0 +1,25 @@
+/* pages/zhaopin/zhaopin.wxss *//* pages/cgsqd/cgsqd.wxss */.weui-cell__hd{
+  width: 180rpx;
+}
+.weui-select{
+  height:40rpx;
+  line-height: 40rpx;
+}
+.btnadd{
+  float: left;
+  width: 48%;
+}
+.btnconfirm{
+  float: right;
+  width: 48%;
+}
+
+.explain{
+  color:#666666;
+}
+.weui-cell__hd{
+  font-size: 36rpx;
+}
+.weui-cell__bd{
+  font-size: 36rpx;
+}

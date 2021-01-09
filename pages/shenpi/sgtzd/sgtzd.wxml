@@ -1,0 +1,39 @@
+<view>
+  <mp-cells title="基本信息">
+    <mp-cell title="项目号" ext-class="formList">
+      <input class="weui-input" placeholder="请输入项目号" />
+    </mp-cell>
+    <mp-cell title="工程名称" ext-class="formList">
+      <input class="weui-input" placeholder="请输入工程名称" />
+    </mp-cell>
+    <mp-cell title="施工单位" ext-class="formList">
+      <input class="weui-input" placeholder="请输入施工单位" />
+    </mp-cell>
+    <mp-cell title="施工地点" ext-class="formList">
+      <input class="weui-input" placeholder="请输入施工地点" />
+    </mp-cell>
+    <mp-cell title="负责人" ext-class="formList">
+      <input class="weui-input" placeholder="请输入负责人" />
+    </mp-cell>
+    <mp-cell title="联系电话" ext-class="formList">
+      <input class="weui-input" placeholder="请输入联系电话" />
+    </mp-cell>
+    <mp-cell prop="date" title="施工时间" ext-class="formList">
+      <picker data-field="date" mode="date" value="{{date}}" bindchange="bindDateChange">
+        <view class="weui-input">{{date}}</view>
+      </picker>
+    </mp-cell>
+    <mp-cell title="备注" ext-class="formList">
+      <input class="weui-input" placeholder="请输入备注" />
+    </mp-cell>
+    <view class="weui-cells__title">施工内容</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell">
+        <view class="weui-cell__bd">
+          <textarea class="weui-textarea" placeholder="请输入文本" style="height: 3.3em" />
+          <view class="weui-textarea-counter">0/200</view>
+        </view>
+      </view>
+    </view>
+  </mp-cells>
+</view>

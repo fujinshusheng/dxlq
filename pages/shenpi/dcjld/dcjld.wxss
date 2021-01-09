@@ -1,0 +1,43 @@
+.weui-cell__hd{
+  width: 180rpx;
+}
+.weui-select{
+  height:40rpx;
+  line-height: 40rpx;
+}
+.btnadd{
+  float: left;
+  width: 48%;
+}
+.btnconfirm{
+  float: right;
+  width: 48%;
+}
+.explain{
+  color:#666666;
+}
+.addinfo{
+  width: 92%;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  height: 70rpx;
+}
+.addtitle{
+  float: left;
+  line-height: 70rpx;
+  color: #999999;
+  font-size: 28rpx;
+}
+.btns{
+  float: right;
+}
+
+.clear{
+  clear: both;
+}
+.weui-cell__hd{
+  font-size: 36rpx;
+}
+.weui-cell__bd{
+  font-size: 36rpx;
+}

@@ -1,0 +1,62 @@
+<view>
+  <mp-cells title="基本信息">
+    <mp-cell prop="date" title="申请日期" ext-class="formList">
+      <picker data-field="date" mode="date" value="{{date}}" bindchange="bindDateChange">
+        <view class="weui-input">{{date}}</view>
+      </picker>
+    </mp-cell>
+    <mp-cell title="申请部门" ext-class="formList">
+      <input data-field="qq" class="weui-input" placeholder="请输入申请部门"/>
+    </mp-cell>
+    <mp-cell title="申请人" ext-class="formList">
+      <input class="weui-input" placeholder="请输入申请人" />
+    </mp-cell>
+  </mp-cells>
+  <view wx:for="{{formArrs}}" wx:key="unique">
+    <view class="addinfo">
+      <view class="addtitle">物料明细 NO.{{item}}</view>
+      <view class="btns">
+        <button class="mini-btn" type="default" size="mini" style="margin-right:20rpx">关闭</button>
+        <button class="mini-btn" type="warn" size="mini" bindtap="deleteform" data-tag="{{item}}">删除</button>
+      </view>
+    </view>
+    <view class="clear"></view>
+    <view class="form">
+      <mp-cells>
+        <mp-cell title="品名" ext-class="formList">
+          <input class="weui-input" placeholder="请输入品名" />
+        </mp-cell>
+        <mp-cell title="规格型号" ext-class="formList">
+          <input class="weui-input" placeholder="请输入规格型号" />
+        </mp-cell>
+        <mp-cell title="数量" ext-class="formList">
+          <input class="weui-input" placeholder="请输入数量" />
+        </mp-cell>
+        <mp-cell title="批准数量" ext-class="formList">
+          <input class="weui-input" placeholder="请输入批准数量" />
+        </mp-cell>
+      </mp-cells>
+    </view>
+  </view>
+
+  <mp-cells title="订单信息">
+    <mp-cell title="创建人" ext-class="formList">
+      <input class="weui-input" placeholder="请输入创建人" />
+    </mp-cell>
+    <mp-cell title="创建时间" ext-class="formList">
+      <input class="weui-input" placeholder="请输入创建时间" />
+    </mp-cell>
+    <mp-cell title="修改人" ext-class="formList">
+      <input class="weui-input" placeholder="请输入修改人" />
+    </mp-cell>
+    <mp-cell title="修改时间" ext-class="formList">
+      <input class="weui-input" placeholder="请输入修改时间" />
+    </mp-cell>
+  </mp-cells>
+  <view class="operatebtn">
+    <view class="btnadd"><button type="primary"  plain="true"  bindtap="addform" data-number="{{number}}" style="width:100%">新增物料明细</button>
+    </view>
+    <view class="btnconfirm"><button type="primary"  plain="true"
+        style="color:#29abe2;border:1rpx solid #29abe2;width:100%;">提交</button></view>
+  </view>
+</view>

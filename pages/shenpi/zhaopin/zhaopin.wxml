@@ -1,0 +1,56 @@
+<view>
+  <mp-cells title="部门信息">
+    <mp-cell title="编号" ext-class="formList">
+      <input data-field="" class="weui-input" placeholder="请输入编号" />
+    </mp-cell>
+    <mp-cell title="申请部门" ext-class="formList">
+      <picker bindchange="bindAccountChange" value="{{accountIndex}}" range="{{accounts}}">
+        <view wx:if="{{accounts[accountIndex]}}">{{accounts[accountIndex]}}</view>
+        <view wx:else class="explain">请输入申请部门</view>
+      </picker>
+    </mp-cell>
+    <mp-cell title="需求人数" ext-class="formList">
+      <input data-field="" class="weui-input" placeholder="请输入需求人数" />
+    </mp-cell>
+    <mp-cell prop="date" title="报道日期" ext-class="formList">
+      <picker data-field="date" mode="date" value="{{date}}" bindchange="bindDateChange">
+        <view class="weui-input">{{date}}</view>
+      </picker>
+    </mp-cell>
+    <mp-cell title="申请理由" ext-class="formList">
+      <input data-field="" class="weui-input" placeholder="请输入申请理由" />
+    </mp-cell>
+    <mp-cell title="用工性质" ext-class="formList">
+      <input data-field="" class="weui-input" placeholder="请输入用工性质" />
+    </mp-cell>
+    <mp-cell title="安排岗位" ext-class="formList">
+      <input data-field="" class="weui-input" placeholder="请输入安排岗位" />
+    </mp-cell>
+  </mp-cells>
+  <mp-cells title="需求岗位人员要求">
+    <mp-cell title="性别" ext-class="formList">
+      <radio-group bindchange="radioChange">
+        <radio value="r1" checked="true"/>男
+        <radio value="r2" />女
+      </radio-group>
+    </mp-cell>
+    <mp-cell title="年龄限制" ext-class="formList">
+      <input class="weui-input" placeholder="请输入年龄限制" />
+    </mp-cell>
+    <mp-cell title="学历要求" ext-class="formList">
+      <input class="weui-input" placeholder="请输入学历要求" />
+    </mp-cell>
+    <mp-cell title="证书要求" ext-class="formList">
+      <input class="weui-input" placeholder="请输入证书要求" />
+    </mp-cell>
+    <mp-cell title="经验要求" ext-class="formList">
+      <input class="weui-input" placeholder="请输入经验要求" />
+    </mp-cell>
+    <mp-cell title="其他要求" ext-class="formList">
+      <input class="weui-input" placeholder="请输入其他要求" />
+    </mp-cell>
+  </mp-cells>
+  <mp-cells title="审批历史记录">
+    <tablelist></tablelist>
+  </mp-cells>
+</view>

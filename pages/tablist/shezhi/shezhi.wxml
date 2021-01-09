@@ -1,0 +1,12 @@
+<view>
+  <view wx:for="{{menus}}" wx:key="unique">
+      <view  data-id="{{item.id}}" class="pztitle">{{item.title}}</view>
+      <checkbox-group bindchange="checkboxChange" data-tag="{{index}}">
+        <view class="pz">
+            <view wx:for="{{item.module}}" wx:key="unique" wx:for-item="val" class="pzitem">
+              <checkbox value="{{val.text}}" checked="{{!val.checked}}" />{{val.text}}
+            </view>
+        </view>
+      </checkbox-group>
+  </view>
+</view>

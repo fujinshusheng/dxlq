@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "tablelist":"/components/common/tablelist/tablelist",
+    "selectlist":"/components/common/selectlist/selectlist",
+    "mp-cells": "/miniprogram_npm/weui-miniprogram/cells/cells",
+    "mp-cell": "/miniprogram_npm/weui-miniprogram/cell/cell"
+  
+  },
+  "navigationBarTitleText": "设备保养通知单"
+}

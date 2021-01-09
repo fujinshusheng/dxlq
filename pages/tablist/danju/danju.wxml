@@ -1,0 +1,28 @@
+<view class="mapbox">
+  <map id="myMap" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" style="width: 100%; height: 456px;"></map>
+</view>
+<view class="operate">
+  <view wx:if="{{chooseposition}}" class="choose">
+    <view class="address">
+      {{chooseposition.name}}
+    </view>
+    <view class="deleteicon">
+      <mp-icon icon="close" color="black" size="{{18}}" bindtap="goback"></mp-icon>
+    </view>
+  </view>
+  <view class="input" wx:else>
+    <mp-icon icon="search" color="black" size="{{25}}" class="search"></mp-icon>
+    <input class="weui-input" bindfocus="moveToLocation"  placeholder="查找地点、公交、地铁"/>
+    <view class="boxall">
+      <view class="box" wx:for="{{tripmode}}" wx:key="unique" bindtap="ymgoto">
+        <view class="boxcon" style="background:{{item.backgroundcolor}}">
+          <view class="img">
+            <image src="{{item.url}}"></image>
+          </view>
+        </view>
+        <view class="text">{{item.mode}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- <button type="primary" bindtap="moveToLocation">平移中心点</button> -->

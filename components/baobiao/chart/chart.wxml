@@ -1,0 +1,19 @@
+<!--components/baobiao/chart/chart.wxml-->
+<view class="chart" >
+  <view  wx:for="{{chart}}" wx:key="unique" class="demo">
+    <view class="chartinfo"  bindtap="ymgoto" data-id="{{item.id}}">
+      <view class="chartleft">
+        <view class="charttitle">{{item.title}}</view>
+        <view class="chartbrief">{{item.brief}}</view>
+      </view>
+      <view class="chartright">
+        <image src="{{url}}" class="chartimage"></image>
+      </view>
+    </view>
+    <view class="clear"></view>
+    <view class="chartoperate">
+      <view class="charttime">{{item.dateTime}}</view>
+      <view class="chartbtn">查看历史报表</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,4 @@
+/* components/common/tablist/tablist.wxss */
+.mycolor{
+  color: red;
+}

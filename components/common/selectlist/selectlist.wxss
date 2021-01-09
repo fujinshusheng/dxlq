@@ -1,0 +1,73 @@
+.fuzzy{
+  height: 120rpx;
+  border-bottom: 1rpx solid #eeeeff;
+  position: relative;
+}
+.fuzzyinfo{
+  height: 120rpx;
+}
+.fuzzyname{
+  box-sizing: border-box;
+  float: left;
+  width: 28%;
+  line-height: 120rpx;
+  padding-left: 36rpx;
+  font-size: 36rpx;
+}
+.fuzzyinput{
+  float: right;
+  width:72%;
+}
+.fuzzyinput>input{
+  line-height: 120rpx;
+  height: 60rpx;
+  margin:30rpx auto 30rpx 0;
+  font-size: 36rpx;
+}
+
+
+.fuzzyList{
+  z-index: 99999999;
+  position: absolute;
+  width: 80%;
+  background-color: white;
+  left: 10%;
+  border:1rpx solid #999999;
+  padding: 20rpx 20rpx 20rpx;
+}
+.fuzzybox{
+  position: relative;
+}
+.search{
+  border:1px solid #999999;
+  height: 70rpx;
+  border-radius: 10rpx;
+  padding-left: 20rpx;
+  font-size: 28rpx;
+}
+.dataLists{
+  overflow-y: scroll;
+  margin-top:20rpx;
+}
+.fuzzytext{
+  font-size: 32rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  padding-left:20rpx;
+}
+
+.fuzzyicon{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  left: 540rpx;
+  top:16rpx;
+
+}
+.fuzzyicon>image{
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+

@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "mp-tabs": "/components/expand/tabs/index",
+    "selectlist":"/components/common/selectlist/selectlist",
+    "tablist":"/components/common/tablist/tablist"
+  }
 }

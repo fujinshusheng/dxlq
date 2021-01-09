@@ -1,0 +1,64 @@
+<view>
+  <mp-cells title="审批历史记录">
+    <tablelist></tablelist>
+  </mp-cells>
+  <view wx:for="{{formArrs}}" wx:key="unique">
+    <view class="addinfo">
+      <view class="addtitle">物料明细 NO.{{item}}</view>
+      <view class="btns">
+        <button class="mini-btn" type="default" size="mini" style="margin-right:20rpx">关闭</button>
+        <button class="mini-btn" type="warn" size="mini" bindtap="deleteform" data-tag="{{item}}">删除</button>
+      </view>
+    </view>
+    <view class="clear"></view>
+    <view class="form">
+      <mp-cells>
+        <mp-cell title="姓名" ext-class="formList">
+          <input class="weui-input" placeholder="请输入姓名" />
+        </mp-cell>
+        <mp-cell title="姓名" ext-class="formList">
+          <picker bindchange="bindAccountChange" value="{{accountIndex}}" range="{{accounts}}">
+            <view wx:if="{{accounts[accountIndex]}}">{{accounts[accountIndex]}}</view>
+            <view wx:else class="explain">请输入姓名</view>
+          </picker>
+        </mp-cell>
+        <mp-cell title="性别" ext-class="formList">
+          <radio-group bindchange="radioChange">
+            <radio value="r1" checked="true" />男
+            <radio value="r2" />女
+          </radio-group>
+        </mp-cell>
+        <mp-cell prop="date" title="日期" ext-class="formList">
+          <picker data-field="date" mode="date" value="{{date}}" bindchange="bindDateChange">
+            <view class="weui-input">{{date}}</view>
+          </picker>
+        </mp-cell>
+        <mp-cell title="学历" ext-class="formList">
+          <picker bindchange="bindAccountChange" value="{{accountIndex}}" range="{{accounts}}">
+            <view wx:if="{{accounts[accountIndex]}}">{{accounts[accountIndex]}}</view>
+            <view wx:else class="explain">请输入学历</view>
+          </picker>
+        </mp-cell>
+        <mp-cell title="从事岗位" ext-class="formList">
+          <picker bindchange="bindAccountChange" value="{{accountIndex}}" range="{{accounts}}">
+            <view wx:if="{{accounts[accountIndex]}}">{{accounts[accountIndex]}}</view>
+            <view wx:else class="explain">请输入从事岗位</view>
+          </picker>
+        </mp-cell>
+        <mp-cell title="申请培训内容" ext-class="formList">
+          <input class="weui-input" placeholder="请输入申请培训内容" />
+        </mp-cell>
+        <mp-cell title="培训时间" ext-class="formList">
+          <input class="weui-input" placeholder="请输入培训时间" />
+        </mp-cell>
+      </mp-cells>
+    </view>
+  </view>
+  <view class="operatebtn">
+    <view class="btnadd"><button type="primary" plain="true" bindtap="addform" data-number="{{number}}"
+        style="width:100%">新增物料明细</button>
+    </view>
+    <view class="btnconfirm"><button type="primary" plain="true"
+        style="color:#29abe2;border:1rpx solid #29abe2;width:100%;">提交</button></view>
+  </view>
+</view>

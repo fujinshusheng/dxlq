@@ -1,0 +1,22 @@
+
+.navtitle{
+  margin-left: 60rpx;
+  margin-top: 30rpx;
+  font-size: 32rpx;
+}
+.navList{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.nav{
+  width: 26%;
+  text-align: center;
+  border:1rpx solid rgb(245,154,35);
+  border-radius: 60rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  margin: 10rpx 20rpx;
+  letter-spacing: 4rpx;
+}

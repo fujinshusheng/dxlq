@@ -5,7 +5,8 @@ const formatTime = date => {
   const hour = date.getHours()
   const minute = date.getMinutes()
   const second = date.getSeconds()
-  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+  // return [year, month, day].map(formatNumber).join('-') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+  return [year, month, day].map(formatNumber).join('-');
 }
 
 const formatNumber = n => {
@@ -27,11 +28,6 @@ const submit = (api,data,callback) => {
         callback(res);
         return false;
       }
-      wx.showToast({
-        title: res.data.error,
-        icon: 'none',
-        duration: 2000
-      })
     },
     fail(){
       wx.showToast({
@@ -42,6 +38,7 @@ const submit = (api,data,callback) => {
     }
   })
 }
+
 module.exports = {
   formatTime: formatTime,
   submit:submit

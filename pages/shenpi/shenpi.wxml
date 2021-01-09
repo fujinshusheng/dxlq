@@ -1,6 +1,0 @@
-<view>
-  <header url="{{userInfo.avatarUrl}}"></header>
-  <process></process>
-  <module></module>
-</view>
-

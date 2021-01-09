@@ -1,17 +1,31 @@
 {
-  "pages":[
+  "pages": [
+    "pages/tablist/shenpi/shenpi",
+    "pages/shenpi/xsckd/xsckd",
+    "pages/shenpi/sgtzd/sgtzd",
+    "pages/shenpi/jyd/jyd",
+    "pages/shenpi/sltzd/sltzd",
+    "pages/tablist/danju/danju",
     "pages/index/index",
-    "pages/shenpi/shenpi",
-    "pages/danju/danju",
-    "pages/baobiao/baobiao",
-    "pages/shezhi/shezhi",
-    "pages/logs/logs"
+    "pages/shenpi/sbbytzd/sbbytzd",
+    "pages/shenpi/sbwxd/sbwxd",
+    "pages/shenpi/dcjld/dcjld",
+    "pages/shenpi/cgsqd/cgsqd",
+    "pages/tablist/baobiao/baobiao",
+    "pages/shenpi/ndpxjhd/ndpxjhd",
+    "pages/shenpi/ygpxjld/ygpxjld",
+    "pages/shenpi/pxxqsqd/pxxqsqd",
+    "pages/tablist/shezhi/shezhi",
+    "pages/shenpi/zhaopin/zhaopin",
+    "pages/shenpi/gcdd/gcdd",
+    "pages/baobiao/baobiaodetail/baobiaodetail",
+    "pages/danju/routerplan/routerplan"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#6e6d6b",
@@ -20,34 +34,49 @@
     "backgroundColor": "#fff",
     "list": [
       {
-        "pagePath": "pages/shenpi/shenpi",
+        "pagePath": "pages/tablist/shenpi/shenpi",
         "iconPath": "images/nav/shenpi.png",
         "selectedIconPath": "images/nav/shenpiselect.png",
         "text": "审批"
       },
       {
-        "pagePath": "pages/danju/danju",
+        "pagePath": "pages/tablist/danju/danju",
         "iconPath": "images/nav/danju.png",
         "selectedIconPath": "images/nav/danjuselect.png",
-        "text": "单据"
+        "text": "地图"
       },
       {
-        "pagePath": "pages/baobiao/baobiao",
+        "pagePath": "pages/tablist/baobiao/baobiao",
         "iconPath": "images/nav/baobiao.png",
         "selectedIconPath": "images/nav/baobiaoselect.png",
         "text": "报表"
       },
       {
-        "pagePath": "pages/shezhi/shezhi",
+        "pagePath": "pages/tablist/shezhi/shezhi",
         "iconPath": "images/nav/shezhi.png",
         "selectedIconPath": "images/nav/shezhiselect.png",
         "text": "设置"
       }
     ]
   },
+  "plugins": {
+    "routePlan": {
+      "version": "1.0.8",
+      "provider": "wx50b5593e81dd937a"
+    }
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序定位"
+    }
+  },
   "networkTimeout": {
     "request": 10000,
     "downloadFile": 10000
+  },
+  "useExtendedLib": {
+    "kbone": true,
+    "weui": true
   },
   "debug": false,
   "style": "v2",

@@ -1,0 +1,65 @@
+<view>
+  <mp-cells title="基本信息">
+    <mp-cell title="收料部门" ext-class="formList">
+      <input class="weui-input" placeholder="请输入收料部门" />
+    </mp-cell>
+    <mp-cell title="单据编号" ext-class="formList">
+      <input class="weui-input" placeholder="请输入单据编号" />
+    </mp-cell>
+
+    <mp-cell prop="date" title="收料日期" ext-class="formList">
+      <picker data-field="date" mode="date" value="{{date}}" bindchange="bindDateChange">
+        <view class="weui-input">{{date}}</view>
+      </picker>
+    </mp-cell>
+
+    <mp-cell title="收料员" ext-class="formList">
+      <input class="weui-input" placeholder="请输入收料员" />
+    </mp-cell>
+    <mp-cell title="供应商" ext-class="formList">
+      <input class="weui-input" placeholder="请输入供应商" />
+    </mp-cell>
+  </mp-cells>
+  <view wx:for="{{formArrs}}" wx:key="unique">
+    <view class="addinfo">
+      <view class="addtitle">物料明细 NO.{{item}}</view>
+      <view class="btns">
+        <button class="mini-btn" type="default" size="mini" style="margin-right:20rpx">关闭</button>
+        <button class="mini-btn" type="warn" size="mini" bindtap="deleteform" data-tag="{{item}}">删除</button>
+      </view>
+    </view>
+    <view class="clear"></view>
+    <view class="form">
+      <mp-cells>
+        <mp-cell title="物料编码" ext-class="formList">
+          <input class="weui-input" placeholder="请输入物料编码" />
+        </mp-cell>
+        <mp-cell title="物料名称" ext-class="formList">
+          <input class="weui-input" placeholder="请输入物料名称" />
+        </mp-cell>
+        <mp-cell title="规格型号" ext-class="formList">
+          <input class="weui-input" placeholder="请输入规格型号" />
+        </mp-cell>
+        <mp-cell title="车牌号" ext-class="formList">
+          <input class="weui-input" placeholder="请输入车牌号" />
+        </mp-cell>
+        <mp-cell title="交货数量" ext-class="formList">
+          <input class="weui-input" placeholder="请输入交货数量" />
+        </mp-cell>
+        <mp-cell title="仓库" ext-class="formList">
+          <input class="weui-input" placeholder="请输入仓库" />
+        </mp-cell>
+        <mp-cell title="仓位" ext-class="formList">
+          <input class="weui-input" placeholder="请输入仓位" />
+        </mp-cell>
+      </mp-cells>
+    </view>
+  </view>
+  <view class="operatebtn">
+    <view class="btnadd"><button type="primary" plain="true" bindtap="addform" data-number="{{number}}"
+        style="width:100%">新增物料明细</button>
+    </view>
+    <view class="btnconfirm"><button type="primary" plain="true"
+        style="color:#29abe2;border:1rpx solid #29abe2;width:100%;">提交</button></view>
+  </view>
+</view>

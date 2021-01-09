@@ -1,0 +1,21 @@
+<view class="fuzzy">
+  <view class="fuzzyinfo">
+    <view class="fuzzyname">名称</view>
+    <view class="fuzzyinput">
+      <input class="weui-input" auto-focus placeholder="将会获取焦点"  value="{{val}}" bindtap="show"/>
+    </view>
+  </view>
+  <view class="fuzzyList" wx:if="{{num}}">
+    <view class="fuzzybox">
+      <input class="weui-input search"  bindinput="chaxun" placeholder="请输入关键词搜索"/>
+      <view class="fuzzyicon">
+        <image src="{{iconUrl}}"></image>
+      </view>
+    </view>
+    <view class="dataLists" style="height:{{height}};border:1px solid #999999" wx:if="{{dataList}}">
+      <view wx:for="{{dataList}}"  wx:key="unique" class="fuzzytext" data-key="{{index}}" bindtap="choose">
+        {{item.title}} 
+      </view>
+    </view>
+  </view>
+</view>

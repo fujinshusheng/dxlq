@@ -1,0 +1,9 @@
+.pztitle{
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.pz{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: space-between 
+}

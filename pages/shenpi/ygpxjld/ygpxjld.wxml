@@ -1,0 +1,81 @@
+<view>
+  <mp-cells title="基本信息">
+    <mp-cell title="培训项目" ext-class="formList">
+      <input class="weui-input" placeholder="请输入培训项目" />
+    </mp-cell>
+    <mp-cell prop="date" title="时间" ext-class="formList">
+      <picker data-field="date" mode="date" value="{{date}}" bindchange="bindDateChange">
+        <view class="weui-input">{{date}}</view>
+      </picker>
+    </mp-cell>
+    <mp-cell title="培训师资" ext-class="formList">
+      <input class="weui-input" placeholder="请输入培训师资" />
+    </mp-cell>
+    <mp-cell title="地点" ext-class="formList">
+      <input class="weui-input" placeholder="请输入地点" />
+    </mp-cell>
+    <mp-cell title="考核方式" ext-class="formList">
+      <input class="weui-input" placeholder="请输入考核方式" />
+    </mp-cell>
+    <mp-cell title="参加人员" ext-class="formList">
+      <picker bindchange="bindAccountChange" value="{{accountIndex}}" range="{{accounts}}">
+        <view wx:if="{{accounts[accountIndex]}}">{{accounts[accountIndex]}}</view>
+        <view wx:else class="explain">请输入参加人员</view>
+      </picker>
+    </mp-cell>
+    <mp-cell title="内容摘要" ext-class="formList">
+      <input class="weui-input" placeholder="请输入内容摘要" />
+    </mp-cell>
+    <mp-cell title="效果评价" ext-class="formList">
+      <input class="weui-input" placeholder="请输入效果评价" />
+    </mp-cell>
+    <mp-cell title="评价人" ext-class="formList">
+      <input class="weui-input" placeholder="请输入评价人" />
+    </mp-cell>
+    <mp-cell prop="date" title="评价日期" ext-class="formList">
+      <picker data-field="date" mode="date" value="{{date}}" bindchange="bindDateChange">
+        <view class="weui-input">{{date}}</view>
+      </picker>
+    </mp-cell>
+  </mp-cells>
+  <view wx:for="{{formArrs}}" wx:key="unique">
+    <view class="addinfo">
+      <view class="addtitle">物料明细 NO.{{item}}</view>
+      <view class="btns">
+        <button class="mini-btn" type="default" size="mini" style="margin-right:20rpx">关闭</button>
+        <button class="mini-btn" type="warn" size="mini" bindtap="deleteform" data-tag="{{item}}">删除</button>
+      </view>
+    </view>
+    <view class="clear"></view>
+    <view class="form">
+      <mp-cells>
+        <mp-cell title="序号" ext-class="formList">
+          <input class="weui-input" placeholder="请输入序号" />
+        </mp-cell>
+
+        <mp-cell title="姓名" ext-class="formList">
+          <picker bindchange="bindAccountChange" value="{{accountIndex}}" range="{{accounts}}">
+            <view wx:if="{{accounts[accountIndex]}}">{{accounts[accountIndex]}}</view>
+            <view wx:else class="explain">请输入姓名</view>
+          </picker>
+        </mp-cell>
+        <mp-cell title="部门" ext-class="formList">
+          <input class="weui-input" placeholder="请输入部门" />
+        </mp-cell>
+        <mp-cell title="性别" ext-class="formList">
+          <radio-group bindchange="radioChange">
+            <radio value="r1" checked="true" />合格
+            <radio value="r2" />不合格
+          </radio-group>
+        </mp-cell>
+      </mp-cells>
+    </view>
+  </view>
+  <view class="operatebtn">
+    <view class="btnadd"><button type="primary" plain="true" bindtap="addform" data-number="{{number}}"
+        style="width:100%">新增物料明细</button>
+    </view>
+    <view class="btnconfirm"><button type="primary" plain="true"
+        style="color:#29abe2;border:1rpx solid #29abe2;width:100%;">提交</button></view>
+  </view>
+</view>

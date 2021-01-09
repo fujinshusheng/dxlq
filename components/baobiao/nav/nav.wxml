@@ -1,0 +1,9 @@
+
+<view class="navinfo">
+  <!-- <view class="navtitle">{{navinfo.title}}</view> -->
+  <view class="navList">
+    <view wx:for="{{navinfo.navList}}" wx:key="unique" class="nav">
+      <view  bindtap="navbtn" data-id="{{item.id}}">{{item.nav}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "module":"/components/shenpi/module/module",
+    "process":"/components/shenpi/process/process",
+    "header":"/components/common/header/header"
+  },
+  "navigationBarTitleText": "审批界面"
+
+}

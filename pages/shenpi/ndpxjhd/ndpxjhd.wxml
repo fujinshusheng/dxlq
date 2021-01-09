@@ -1,0 +1,74 @@
+<view>
+  <mp-cells title="基本信息">
+    <mp-cell prop="date" title="年度" ext-class="formList">
+      <picker data-field="date" mode="date" value="{{date}}" bindchange="bindDateChange">
+        <view class="weui-input">{{date}}</view>
+      </picker>
+    </mp-cell>
+    <mp-cell title="编号" ext-class="formList">
+      <input class="weui-input" placeholder="请输入编号" />
+    </mp-cell>
+    <mp-cell prop="date" title="编制日期" ext-class="formList">
+      <picker data-field="date" mode="date" value="{{date}}" bindchange="bindDateChange">
+        <view class="weui-input">{{date}}</view>
+      </picker>
+    </mp-cell>
+    <mp-cell title="审核" ext-class="formList">
+      <input class="weui-input" placeholder="请输入审核" />
+    </mp-cell>
+    <mp-cell title="批准" ext-class="formList">
+      <input class="weui-input" placeholder="请输入批准" />
+    </mp-cell>
+
+  </mp-cells>
+  <view wx:for="{{formArrs}}" wx:key="unique">
+    <view class="addinfo">
+      <view class="addtitle">物料明细 NO.{{item}}</view>
+      <view class="btns">
+        <button class="mini-btn" type="default" size="mini" style="margin-right:20rpx">关闭</button>
+        <button class="mini-btn" type="warn" size="mini" bindtap="deleteform" data-tag="{{item}}">删除</button>
+      </view>
+    </view>
+    <view class="clear"></view>
+    <view class="form">
+      <mp-cells>
+        <mp-cell title="培训内容" ext-class="formList">
+          <input class="weui-input" placeholder="请输入培训内容" />
+        </mp-cell>
+
+        <mp-cell title="培训对象" ext-class="formList">
+          <picker bindchange="bindAccountChange" value="{{accountIndex}}" range="{{accounts}}">
+            <view wx:if="{{accounts[accountIndex]}}">{{accounts[accountIndex]}}</view>
+            <view wx:else class="explain">请输入培训对象</view>
+          </picker>
+        </mp-cell>
+        <mp-cell title="培训方式" ext-class="formList">
+          <input class="weui-input" placeholder="请输入培训方式" />
+        </mp-cell>
+        <mp-cell title="师资选择" ext-class="formList">
+          <input class="weui-input" placeholder="请输入师资选择" />
+        </mp-cell>
+        <mp-cell prop="date" title="培训时间" ext-class="formList">
+          <picker data-field="date" mode="date" value="{{date}}" bindchange="bindDateChange">
+            <view class="weui-input">{{date}}</view>
+          </picker>
+        </mp-cell>
+
+
+        <mp-cell title="考核方式" ext-class="formList">
+          <input class="weui-input" placeholder="请输入考核方式" />
+        </mp-cell>
+        <mp-cell title="备注" ext-class="formList">
+          <input class="weui-input" placeholder="请输入备注" />
+        </mp-cell>
+      </mp-cells>
+    </view>
+  </view>
+  <view class="operatebtn">
+    <view class="btnadd"><button type="primary" plain="true" bindtap="addform" data-number="{{number}}"
+        style="width:100%">新增物料明细</button>
+    </view>
+    <view class="btnconfirm"><button type="primary" plain="true"
+        style="color:#29abe2;border:1rpx solid #29abe2;width:100%;">提交</button></view>
+  </view>
+</view>

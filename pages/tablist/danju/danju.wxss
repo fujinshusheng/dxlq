@@ -1,0 +1,73 @@
+.operate{
+  height: 340rpx;
+  position: relative;
+  top:-340rpx;
+  z-index: 99999999;
+  background-color: white;
+  border-radius: 30rpx;
+}
+.input{
+  width: 92%;
+  margin: 0 auto;
+  padding-top: 40rpx;
+}
+.search{
+  position: absolute;
+  top:60rpx;
+  left:40rpx;
+}
+.input>input{
+  width: 88%;
+  height: 100rpx;
+  background-color:#eff0f2;
+  border-radius: 10rpx;
+  font-size: 36rpx;
+  line-height: 100rpx;
+  padding-left: 80rpx;
+}
+.choose{
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 40rpx;
+}
+.address{
+  float: left;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.deleteicon{
+  float: right;
+}
+.boxall{
+  height: 120rpx;
+  margin-top: 40rpx;
+  display: flex;
+  flex-wrap:wrap ;
+  justify-content:space-around;
+
+}
+.box{
+  width:100rpx;
+}
+.boxcon{
+  width:100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.img{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 20rpx;
+  padding-top: 20rpx;
+}
+.img>image{
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 100%;
+  min-height: 100%;
+}
+.text{
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
