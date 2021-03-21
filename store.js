@@ -4,7 +4,7 @@ import { configure, observable, action } from 'mobx-miniprogram'
 configure({ enforceActions: 'observed' });
 
 export const store = observable({
-
+  name:"liujianbiao",
   menus:[
     {title:"销售",status:"隐藏",tag:1,module:[
       {text:"数学",iconpath:"/images/fun/person.png",url:"/pages/index/index",num:1,checked:true},
